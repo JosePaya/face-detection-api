@@ -25,10 +25,12 @@ const app = express();
 app.use(bodyParser.json())
 app.use(cors())
 
-app.get('/', (req, res) => {
-  db.select('*').from('user')
-    .then(users => res.json(users))
-})
+// app.get('/', (req, res) => {
+//   db.select('*').from('user')
+//     .then(users => res.json(users))
+// })
+
+app.get('/', (req, res) => 'It is working')
 
 app.get('/profile/:id', (req, res) => profile.handleProfileGet(req, res, db))
 
