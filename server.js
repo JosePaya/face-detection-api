@@ -30,7 +30,7 @@ app.use(cors())
 //     .then(users => res.json(users))
 // })
 
-app.get('/', (req, res) => 'It is working')
+app.get('/', (req, res) => res.send('It is working'))
 
 app.get('/profile/:id', (req, res) => profile.handleProfileGet(req, res, db))
 
